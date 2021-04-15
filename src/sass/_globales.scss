@@ -1,0 +1,35 @@
+body {
+    font-family: 'Allerta', sans-serif;
+    margin: 0;
+}
+
+table {
+    width: 100%;
+}
+
+th {
+    background: #273b47;
+    color: white;
+}
+
+th {
+    padding: 10px 20px;
+    text-align: left;
+}
+
+td {
+    padding: 20px;
+}
+
+table, td, th {
+    border: 1px solid #273b47;
+    border-collapse: collapse;
+}
+
+input, textarea {
+    outline: 0;
+}
+
+input:focus, textarea:focus {
+    background: lightgray;
+}
