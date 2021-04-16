@@ -5,7 +5,7 @@ class Hero extends Component {
         return (
             <section id="portada" className="portada background">
 
-                <header id="header" className="header contenedor">
+                <header id="header" className="header">
 
                     <figure className="logotipo">
                         <img src={this.props.logoP} alt="Invie logotipo"/>
@@ -27,8 +27,8 @@ class Hero extends Component {
                 </header>
 
                 <div className="contenedor">     
-                    <h1 className="titulo">Guitarras <span>invie</span>sibles</h1>
-                    <h3 className="title-a">Sé la estrella de rock que siempre quisiste ser</h3>
+                    <h1 className="titulo">Guitarras <span>Invie</span>sibles</h1>
+                    <h3 className="slogan-title">Sé la estrella de rock que siempre quisiste ser</h3>
                     <a className="button" href="#guitarras">Conoce mas</a>
                 </div>
 

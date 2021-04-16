@@ -1,42 +1,48 @@
+.header {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
 .titulo {
     font-family: 'Montserrat', sans-serif;
-    font-size: 70px;
+    font-size: 5rem;
     margin-bottom: 0;
     margin-top: 70px;
+
+    & > span {
+        text-decoration: underline;
+    }
 }
 
-.titulo span {
-    text-decoration: underline;
-}
-
-.title-a {
+.slogan-title {
     font-size: 24px;
+    font-style: italic;
     margin-top: 0;
-}
-
-.title-b {
-    font-size: 50px;
-    margin-bottom: 20px;
 }
 
 .guitarras {
     color: #1F313C;
-    margin-bottom: 60px;
-}
+    margin: 0 auto;
+    margin-bottom: 100px;
+    max-width: 800px;
 
-.guitarras h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 35px;
+    & > h2 {
+        width: 50%;
+        margin: 2rem 0 5rem 0;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 2.8rem;
+    }
 }
 
 .portada {
     color: white;
     padding: 20px;
-    height: 500px;
-}
+    height: calc(100vh - 40px);
 
-.portada button {
-    margin-bottom: 70px;
+    & > button {
+        margin-bottom: 70px;
+    }
 }
 
 .menu {
@@ -51,16 +57,16 @@
     margin-left: 30px;
 }
 
-.menu li:before{
+.menu a {
+    color: white;
+    text-decoration: none;
+}
+
+.menu li:before {
     content: '∘';
     font-size: 50px;
     line-height: 20px;
     color: white;
-}
-
-.menu a {
-    color: white;
-    text-decoration: none;
 }
 
 .logotipo {
@@ -69,49 +75,63 @@
 }
 
 .guitarra {
-    margin: 10px 10px 40px 10px;
-    padding: 10px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    padding: 10px 4em;
+    height: 24vh;
+    margin: 20px auto;
+    border: 5px solid #1F313C;
+    border-radius: 6px;
+    color: whitesmoke;
+    background-color: #118ab2;
+    transition: .3s;
     /*overflow: hidden;*/
-    border: 1px solid #1F313C;
-    border-radius: 8px;
+
+    &-image {
+        width: 100%;
+        max-width: 350px;
+        position: absolute;
+        right: 0;
+        top: -88px;
+    }
 }
 
-.guitarra ol {
-    padding: 0;
+.guitarra:hover {
+    box-shadow: 10px 8px 0 #e56b6f;
 }
 
-.guitarra.b {
-    height: 190px;
+.guitarra:nth-of-type(even) {
+    justify-content: flex-end;
+    background-color: #06d6a0;
+    color: #212529;
 }
 
-.derecha {
-    float: right;
-    position: relative;
-    top: -127px;
+.guitarra:nth-of-type(even):hover {
+    box-shadow: -10px 8px 0 #212529;
 }
 
-.izquierda {
-    float: left;
-    position: relative;
+.guitarra:nth-of-type(even) .guitarra-image {
+    max-width: 420px;
+    left: 0;
+    right: initial;
+    top: -20px;
 }
 
-.contenedor-guitarra-a {
-    padding-left: 20px;
-}
-
-.contenedor-guitarra-b {
-    margin-left: 370px;
-    position: relative;
-    bottom: 90px;
-}
-
-.header {
-    position: relative;
+.guitarra-name {
+    font-size: 3em;
+    margin: 0 0 .2em;
+    border-bottom: .1rem dashed ;
 }
 
 .footer {
+    display: flex;
+    justify-content: center;
     background: #273b47;
-    padding: 50px 10px;
+    padding: 60px 10px;
+    margin: auto;
+    text-align: center;
+    max-width: 1920px;
 }
 
 .contacto {
@@ -132,12 +152,7 @@
 .contacto a {
     color: white;
     text-decoration: none;
-    margin: 10px 10px 10px 0;
-}
-
-.footer .contenedor {
-    display: flex;
-    justify-content: space-between;
+    margin: 0 15px 0 0;
 }
 
 .formulario {
@@ -197,7 +212,7 @@
 }
 
 .video-demo {
-    max-width: 500px;
+    max-width: 700px;
     width: 100%;
     border: 5px solid #3c5b6e;
 }

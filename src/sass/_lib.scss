@@ -1,6 +1,7 @@
 .contenedor {
     max-width: 800px;
-    margin: auto;
+    text-align: center;
+    margin: 30vh auto;
     position: relative;
 }
 
@@ -13,18 +14,13 @@
 .button {
     border-radius: 12px;
     border: none;
+    height: auto;
     color: white;
-    padding: 7px 12px;
+    padding: 7px 15px;
     cursor: pointer;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 1.3rem;
     background: #fd324e;
     background: linear-gradient(to left, #fe344e, #ff7250);
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f3c5bd+0,e86c57+50,ea2803+51,ff6600+75,c72200+100;Red+Gloss */
-    /*background: rgb(243,197,189); /* Old browsers */
-    /* background: -moz-linear-gradient(top,  rgba(243,197,189,1) 0%, rgba(232,108,87,1) 50%, rgba(234,40,3,1) 51%, rgba(255,102,0,1) 75%, rgba(199,34,0,1) 100%);
-    background: -webkit-linear-gradient(top,  rgba(243,197,189,1) 0%,rgba(232,108,87,1) 50%,rgba(234,40,3,1) 51%,rgba(255,102,0,1) 75%,rgba(199,34,0,1) 100%);
-    background: linear-gradient(to bottom,  rgba(243,197,189,1) 0%,rgba(232,108,87,1) 50%,rgba(234,40,3,1) 51%,rgba(255,102,0,1) 75%,rgba(199,34,0,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3c5bd', endColorstr='#c72200',GradientType=0 ); */
 }
 

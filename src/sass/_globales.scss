@@ -1,6 +1,16 @@
 body {
     font-family: 'Allerta', sans-serif;
     margin: 0;
+    animation: tr 2s;
+}
+
+@keyframes tr {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 table {
@@ -8,17 +18,18 @@ table {
 }
 
 th {
-    background: #273b47;
-    color: white;
-}
-
-th {
     padding: 10px 20px;
+    background: #273b47;
     text-align: left;
+    color: white;
 }
 
 td {
     padding: 20px;
+}
+
+label {
+    margin: 10px 0 0 0;
 }
 
 table, td, th {
@@ -26,10 +37,34 @@ table, td, th {
     border-collapse: collapse;
 }
 
+input {
+    height: 2.5vh;
+}
+
 input, textarea {
+    padding: 5px;
+    border: 2px solid #273b47;
+    border-radius: 6px;
     outline: 0;
 }
 
 input:focus, textarea:focus {
     background: lightgray;
+}
+
+//
+ol {
+    padding: 0;
+    list-style: none;
+    counter-reset: features;
+}
+
+li {
+    font-size: 18px;
+    letter-spacing: .5px;
+}
+
+li:before {
+    counter-increment: features;
+    content: counter(features)".";
 }

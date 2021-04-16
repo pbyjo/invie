@@ -4,7 +4,6 @@ class Footer extends Component {
     render() {
         return (
             <footer className="footer">
-                <div className="contenedor">
                     <div className="contacto">
                         <img src={this.props.logoF} alt="logotipo blanco"/>
                         <a href="tel:+573024456678"><strong>Telefono</strong> <span>3024456678</span></a>
@@ -13,9 +12,9 @@ class Footer extends Component {
                     <form className="formulario">
                         <div className="col1">
                             <label htmlFor="nombre">Nombre</label>
-                            <input type="text" required id="nombre" name="nombre"/>
+                                <input type="text" required id="nombre" name="nombre"/>
                             <label htmlFor="email">E-mail</label>
-                            <input type="email" required id="email" name="email"/>
+                                <input type="email" required id="email" name="email"/>
                             <div className="sexo">
                                 <label htmlFor="mujer">
                                     <input type="radio" id="mujer" defaultChecked name="sexo" value="mujer" /> 
@@ -45,7 +44,6 @@ class Footer extends Component {
                             <input type="submit" value="Enviar" className="button"/>
                         </div>
                     </form>
-                </div>
             </footer>
         )
     }
