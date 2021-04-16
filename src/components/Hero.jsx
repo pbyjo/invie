@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import logo from '../items/images/invie.png'
 
 class Hero extends Component {
     render() {
@@ -9,22 +8,20 @@ class Hero extends Component {
                 <header id="header" className="header contenedor">
 
                     <figure className="logotipo">
-                        <img src={logo} alt="Invie logotipo"/>
+                        <img src={this.props.logoP} alt="Invie logotipo"/>
                     </figure>
                     
                     <span className="burguer-button icon-menu" id="burguer-button"></span>
 
                     <nav className="menu" id="menu">
                         <ul>
-                            <li>
-                            <a href="index.html">Home</a>
-                            </li>
-                            <li>
-                            <a href="#guitarras">Guitarras</a>
-                            </li>
-                            <li>
-                            <a href="precios.html">Precios</a>
-                            </li>
+                            {this.props.menu.map((item) => {
+                                return (
+                                    <li>
+                                        <a href={item.href}> {item.title} </a>
+                                    </li>
+                                )
+                            })}
                         </ul>
                     </nav>
                 </header>

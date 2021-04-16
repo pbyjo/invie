@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logoWhite from '../items/images/invie-white.png';
 
 class Footer extends Component {
     render() {
@@ -7,9 +6,9 @@ class Footer extends Component {
             <footer className="footer">
                 <div className="contenedor">
                     <div className="contacto">
-                    <img src={logoWhite} alt="logotipo blanco"/>
-                    <a href="tel:+573024456678"><strong>Telefono</strong> <span>3024456678</span></a>
-                    <a href="mailto:contacto@invie.com"><strong>E-mail</strong> <span>contacto@invie.com</span></a>
+                        <img src={this.props.logoF} alt="logotipo blanco"/>
+                        <a href="tel:+573024456678"><strong>Telefono</strong> <span>3024456678</span></a>
+                        <a href="mailto:contacto@invie.com"><strong>E-mail</strong> <span>contacto@invie.com</span></a>
                     </div>
                     <form className="formulario">
                         <div className="col1">

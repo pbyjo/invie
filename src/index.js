@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './styles/index.css';
-import Invie from './components/Invie';
 import reportWebVitals from './reportWebVitals';
+import Invie from './components/Invie';
+import './styles/index.css';
 
 ReactDOM.render(
   <React.StrictMode>
