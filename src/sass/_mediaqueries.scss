@@ -1,71 +1,62 @@
 @media screen and (max-width: 800px) {
-/*body {
-    border: 10px solid red;
-}*/
-/*.contenedor {
-    width: auto;
-    max-width: 800px;
-}*/
 
-/* precios */
-.tabla {
-    margin: 50px 20px;
-}
-.tabla .contenedor {
-    overflow: auto;
-    border: 1px solid #273b47;
-}
+    .tabla {
+        margin: 50px 20px;
+    }
+    .tabla .contenedor {
+        overflow: auto;
+        border: 1px solid #273b47;
+    }
 /* precios */
 /* portada */
-.titulo {
-    font-size: 45px;
-    margin-top: 30px;
-}
-.title-a {
-    font-size: 18px;
-}
-.portada {
-    height: auto;
-}
-.portada .button {
-    margin-bottom: 30px;
-    display: inline-block;
-}
+    .titulo {
+        font-size: 45px;
+        margin-top: 30px;
+    }
+    .title-a {
+        font-size: 18px;
+    }
+    .portada {
+        height: auto;
+    }
+    .portada .button {
+        margin-bottom: 30px;
+        display: inline-block;
+    }
 /* portada */
 
-
 /* guitarras */
-.video-demo-contenedor {
-    margin-bottom: 30px;
-}
-.guitarras {
-    text-align:center;
-}
-.izquierda, .derecha {
-    float: none;
-    position: static;
-}
-.title-b {
-    margin: 0;
-}
-.guitarra li {
-    list-style: none;
-}
-.guitarra.b {
-    height: auto;
-}
-.contenedor-guitarra-b {
-    position: static;
-    margin: 0;
-}
-.contenedor-guitarra-a {
-    padding: 0;
-}
-/* guitarras */
+    .video-demo-contenedor {
+        margin-bottom: 30px;
+    }
+    .guitarras {
+        text-align:center;
+    }
+    .izquierda, .derecha {
+        float: none;
+        position: static;
+    }
+    .title-b {
+        margin: 0;
+    }
+    .guitarra li {
+        list-style: none;
+    }
+    .guitarra.b {
+        height: auto;
+    }
+    .contenedor-guitarra-b {
+        position: static;
+        margin: 0;
+    }
+    .contenedor-guitarra-a {
+        padding: 0;
+    }
 
 }
 
 @media screen and (max-width: 767px) {
+
 /* footer */
 .footer .contenedor {
     display: block;
@@ -74,6 +65,7 @@
 .contacto {
     margin: 0 auto;
 }
+
 .formulario {
     display: block;
     margin: 0 auto;
@@ -84,20 +76,24 @@
     display: block;
     font-size: 16px;
 }
+
 .col1 {
     margin: 0;
 }
+
 input[type="text"],
 input[type="email"] {
     font-size: 16px;
     padding: 5px;
 }
+
 textarea {
     width: 100%;
 }
+
 input[type="radio"],
 input[type="checkbox"] {
-    zoom: 1.5;
+    /* zoom: 1.5; */
 }
 /* footer */
 }
@@ -130,9 +126,7 @@ input[type="checkbox"] {
     margin: 0 10px;
 }*/
 /* guitarras */
-
 }
-
 
 @media screen and (max-width: 500px) {
 /* portada */
@@ -221,30 +215,27 @@ input[type="checkbox"] {
 
 }
 
-
 video {
-width: 100%;
+    width: 100%;
 }
 
-
 .video-responsive-contenedor {
-position: relative;
-padding-top: 56.25%;
+    position: relative;
+    padding-top: 56.25%;
 }
 
 .video-responsive-src {
-position: absolute;
-left: 0;
-right: 0;
-top: 0;
-bottom: 0;
-width: 100%;
-height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
 }
-
 
 @media screen and (-webkit-min-device-pixel-ratio: 2) {
-.background {
-    background-image: url('../items/images/background2x.png');
-}
+    .background {
+        background-image: url('../items/images/background2x.png');
+    }
 }

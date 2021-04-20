@@ -1,12 +1,18 @@
+/* ------------------------- *\
+    Imports y variables
+\* ------------------------- */
+
 /* Logos */
 import logoPortada from '../items/images/invie.png';
 import logoWhite from '../items/images/invie-white.png';
 import g_acustica from '../items/images/invie-acustica.png';
 import g_electrica from '../items/images/invie-classic.png';
+
 /* Componentes */
 import Hero from './Hero';
 import Guitarras from './Guitarras';
 import Footer from './Footer';
+
 /* Variables */
 let videoP = "https://www.youtube.com/embed/R1dW8M4EqYY";
 
@@ -14,7 +20,7 @@ let videoP = "https://www.youtube.com/embed/R1dW8M4EqYY";
     Propiedades
 \* ------------------------- */
 
-const data = {
+/* const data = {
   
   guitarras: [
     {
@@ -56,7 +62,11 @@ const data = {
   logoPortada: logoPortada,
   logoFooter: logoWhite,
   videoP: videoP,
-}
+} */
+
+/* ------------------------- *\
+    Render
+\* ------------------------- */
 
 function App() {
   return (
@@ -66,7 +76,7 @@ function App() {
       {/* Hero */}
       <Hero menu={data.menu} logoP={data.logoPortada}/>
       {/* Guitarras */}
-      <Guitarras guitarras={data.guitarras} videoPrinc={data.videoP}/>
+      <Guitarras guitarras={data.guitarras} video={data.videoP}/>
       {/* Footer */}
       <Footer logoF={data.logoFooter}/>
     </main>
