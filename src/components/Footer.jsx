@@ -1,4 +1,11 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+
+function mapStateToProps(state) {
+    return {
+        logoF: state.logoFooter
+    }
+}
 
 class Footer extends Component {
     render() {
@@ -49,4 +56,4 @@ class Footer extends Component {
     }
 }
 
-export default Footer;
+export default connect(mapStateToProps)(Footer);

@@ -1,4 +1,12 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+
+function mapStateToProps(state) {
+    return {
+        guitarras: state.guitarras,
+        video: state.videoP
+    }
+}
 
 class Guitarras extends Component {
     render() {
@@ -40,4 +48,4 @@ class Guitarras extends Component {
     }
 }
 
-export default Guitarras;
+export default connect(mapStateToProps)(Guitarras);

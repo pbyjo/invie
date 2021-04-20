@@ -1,4 +1,12 @@
 import React, {Component} from 'react';
+import { connect } from 'react-redux';
+
+function mapStateToProps(state) {
+    return {
+        logoP: state.logoHeader,
+        menu: state.menu
+    }
+}
 
 class Hero extends Component {
     render() {
@@ -27,7 +35,7 @@ class Hero extends Component {
                 </header>
 
                 <div className="contenedor">     
-                    <h1 className="titulo">Guitarras <span>Invie</span>sibles</h1>
+                    <h1 className="titulo">Guitarras <span>Invie</span> sibles</h1>
                     <h3 className="slogan-title">Sé la estrella de rock que siempre quisiste ser</h3>
                     <a className="button" href="#guitarras">Conoce mas</a>
                 </div>
@@ -37,4 +45,4 @@ class Hero extends Component {
     }
 }
 
-export default Hero;
+export default connect(mapStateToProps)(Hero);

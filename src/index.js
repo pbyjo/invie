@@ -12,20 +12,25 @@ import Invie from './components/Invie';
 /* Styles */
 import './styles/index.css';
 
-/* Logos */
-import logoPortada from '../items/images/invie.png';
-import logoWhite from '../items/images/invie-white.png';
-import g_acustica from '../items/images/invie-acustica.png';
-import g_electrica from '../items/images/invie-classic.png';
+/* Logos e imágenes */
+import logoHeader from './items/images/invie.png';
+import logoWhite from './items/images/invie-white.png';
+import g_acustica from './items/images/invie-acustica.png';
+import g_electrica from './items/images/invie-classic.png';
 
 /* libs */
 import cheet from 'cheet.js';
+import {Provider} from 'react-redux';
+import { createStore } from 'redux';
+
+/* Variables */
+let videoP = "https://www.youtube.com/embed/R1dW8M4EqYY";
 
 /* ------------------------- *\
     Propiedades
 \* ------------------------- */
 
-const data = {
+const initialState = {
   
   guitarras: [
     {
@@ -64,27 +69,61 @@ const data = {
     }
   ],
   
-  logoPortada: logoPortada,
+  logoHeader: logoHeader,
   logoFooter: logoWhite,
   videoP: videoP,
 }
+
+const easter = {
+  menu: [
+    {
+      href: 'index.html',
+      title: 'Home',
+    }
+  ],
+}
+
+function reducer(state, action) {
+  switch(action.type) {
+    case 'UPDATE_PROPS': {
+      const newProps = action.payload.props;
+      return {...state, ...newProps}
+    }
+    default:
+      return state
+  }
+}
+
+const store = createStore(reducer, initialState);
 
 /* ------------------------- *\
     Render
 \* ------------------------- */
 
 cheet('i n v i e', () =>{
-  console.log('Has descubierto el easter egg');
+  store.dispatch( {
+    type: 'UPDATE_PROPS',
+    payload: {
+      props: easter
+    }
+  });
+  /* console.log('Has descubierto el easter egg'); */
 })
 
 cheet('g o b a c k' , () =>{
-  console.log('Has vuelto al estado original');
+  /* console.log('Has vuelto al estado original'); */
+  store.dispatch( {
+    type: 'UPDATE_PROPS',
+    payload: {
+      props: initialState
+    }
+  });
 })
 
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store={store}>
     <Invie />
-  </React.StrictMode>,
+  </Provider>,
   document.getElementById('root')
 );
 

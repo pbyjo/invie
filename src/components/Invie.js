@@ -2,19 +2,10 @@
     Imports y variables
 \* ------------------------- */
 
-/* Logos */
-import logoPortada from '../items/images/invie.png';
-import logoWhite from '../items/images/invie-white.png';
-import g_acustica from '../items/images/invie-acustica.png';
-import g_electrica from '../items/images/invie-classic.png';
-
 /* Componentes */
 import Hero from './Hero';
 import Guitarras from './Guitarras';
 import Footer from './Footer';
-
-/* Variables */
-let videoP = "https://www.youtube.com/embed/R1dW8M4EqYY";
 
 /* ------------------------- *\
     Propiedades
@@ -73,12 +64,23 @@ function App() {
     <main className="Invie">
       {/* Header */}
 
+
+
       {/* Hero */}
-      <Hero menu={data.menu} logoP={data.logoPortada}/>
+      {/*<Hero menu={data.menu} logoP={data.logoPortada}/>*/}
+      <Hero />
+
+
+
       {/* Guitarras */}
-      <Guitarras guitarras={data.guitarras} video={data.videoP}/>
+      {/*<Guitarras guitarras={data.guitarras} video={data.videoP}/>*/}
+      <Guitarras />
+
+
+
       {/* Footer */}
-      <Footer logoF={data.logoFooter}/>
+      {/*<Footer logoF={data.logoFooter}/>*/}
+      <Footer />
     </main>
   );
 }
