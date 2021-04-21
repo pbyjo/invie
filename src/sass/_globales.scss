@@ -1,16 +1,10 @@
 body {
+    background-color: $color-body;
     font-family: 'Allerta', sans-serif;
     margin: 0;
-    animation: tr 2s;
-}
 
-@keyframes tr {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+    animation-name: tr;
+    animation-duration: 6s;
 }
 
 table {
@@ -67,4 +61,8 @@ li {
 li:before {
     counter-increment: features;
     content: counter(features)".";
+}
+
+h2 {
+    color: $color-text;
 }

@@ -1,0 +1,71 @@
+.guitarras {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1920px;
+    margin: 0;
+    margin-bottom: 100px;
+    color: #1F313C;
+
+    & > h2 {
+        width: 50%;
+        margin: 2rem 0 5rem 25rem;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 2.8rem;
+    }
+}
+
+.guitarra {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    max-width: 45%;
+    padding: 10px 4em;
+    height: 25vh;
+    margin: 20px auto;
+    border-radius: 15px;
+    color: whitesmoke;
+    background-color: $color-cardOne;
+    transition: .3s;
+    z-index: 300;
+    /* overflow: hidden; */
+
+    &-image {
+        width: 100%;
+        max-width: 350px;
+        position: absolute;
+        right: 30px;
+        left: initial;
+        /* top: -82px;   */  
+        bottom: 0px;
+    }
+}
+
+.guitarra-name {
+    font-size: 3em;
+    margin: 0 0 .2em;
+    border-bottom: .1rem dashed ;
+}
+
+.guitarra:hover {
+    box-shadow: 10px 10px 0 $color-hoverOne;
+}
+
+.guitarra:nth-of-type(even) {
+    justify-content: flex-end;
+    background-color: $color-cardTwo;
+    color: #212529;
+}
+
+.guitarra:nth-of-type(even):hover {
+    box-shadow: -10px 10px 0 $color-hoverTwo;
+}
+
+.guitarra:nth-of-type(even) .guitarra-image {
+    max-width: 400px;
+    left: 0;
+    right: initial;
+    /* top: -20px; */
+    bottom: 0px;
+}

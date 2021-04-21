@@ -1,0 +1,57 @@
+.wavetop {
+    position: absolute;
+    width: 100%;
+    bottom: -527px;
+    height: 527px;
+    overflow: hidden;
+    transform: rotate(180deg);
+}
+
+.wavebot {
+    position: absolute;
+    width: 100%;
+    bottom: -1365px;
+    height: 527px;
+    overflow: hidden;
+}
+.wave {
+    position: absolute;
+    width: 2402px;
+    height: 427px;
+    left: -180px;
+    bottom: -70px;
+    background: url(../items/images/waves.png) center bottom no-repeat;
+    
+    animation: 8s waves;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+.a {
+    background-position: 0 -854px;
+}
+
+.b {
+    background-position: 0 -427px;
+    animation-delay: .6s;
+}
+
+.c {
+    background-position: 0 0 ;
+    animation-delay: 1.2s;
+}
+
+@keyframes waves {
+    0% {
+        transform: translate(0,0);
+    }
+
+    50% {
+        transform: translate(-80px, 30px);
+    }
+
+    100% {
+        transform: translate(160px, -60px);
+    }
+}

@@ -7,13 +7,14 @@
 .titulo {
     font-family: 'Montserrat', sans-serif;
     font-size: 5rem;
+    color: $color-text;
     margin-bottom: 0;
     margin-top: 70px;
     line-height: 13vh;
     & > span {
-        color: #FF524F;
+        color: $color-naranja;
         font-style: italic;
-        border-bottom: 3px dashed #FF524F;
+        border-bottom: 3px dashed $color-naranja;
     }
 }
 
@@ -21,20 +22,6 @@
     font-size: 24px;
     font-style: italic;
     margin-top: 0;
-}
-
-.guitarras {
-    color: #1F313C;
-    margin: 0 auto;
-    margin-bottom: 100px;
-    max-width: 800px;
-
-    & > h2 {
-        width: 50%;
-        margin: 2rem 0 5rem 0;
-        font-family: 'Montserrat', sans-serif;
-        font-size: 2.8rem;
-    }
 }
 
 .portada {
@@ -76,56 +63,6 @@
     margin-left: 0;
 }
 
-.guitarra {
-    display: flex;
-    position: relative;
-    align-items: center;
-    padding: 10px 4em;
-    height: 24vh;
-    margin: 20px auto;
-    border: 5px solid #1F313C;
-    border-radius: 6px;
-    color: whitesmoke;
-    background-color: #118ab2;
-    transition: .3s;
-    /*overflow: hidden;*/
-
-    &-image {
-        width: 100%;
-        max-width: 350px;
-        position: absolute;
-        right: 0;
-        top: -88px;
-    }
-}
-
-.guitarra:hover {
-    box-shadow: 10px 8px 0 #e56b6f;
-}
-
-.guitarra:nth-of-type(even) {
-    justify-content: flex-end;
-    background-color: #06d6a0;
-    color: #212529;
-}
-
-.guitarra:nth-of-type(even):hover {
-    box-shadow: -10px 8px 0 #212529;
-}
-
-.guitarra:nth-of-type(even) .guitarra-image {
-    max-width: 420px;
-    left: 0;
-    right: initial;
-    top: -20px;
-}
-
-.guitarra-name {
-    font-size: 3em;
-    margin: 0 0 .2em;
-    border-bottom: .1rem dashed ;
-}
-
 .footer {
     display: flex;
     justify-content: center;
@@ -134,6 +71,7 @@
     margin: auto;
     text-align: center;
     max-width: 1920px;
+    z-index: 300;
 }
 
 .contacto {

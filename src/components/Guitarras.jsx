@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { CSSTransition, TransitionGroup } from 'react-transition-group'
 
 function mapStateToProps(state) {
     return {
         guitarras: state.guitarras,
-        video: state.videoP
+        video: state.videoP,
+        waves: state.waves,
     }
 }
 
@@ -12,6 +14,11 @@ class Guitarras extends Component {
     render() {
         return (
             <section id="guitarras" className="guitarras">
+
+                <section class="wavetop">
+                    <div class="wave circulo a"></div>
+                </section>
+
                 <h2>Nuestras guitarras</h2>
 
                 <div className="video-demo-contenedor">
@@ -26,7 +33,23 @@ class Guitarras extends Component {
                     this.props.guitarras.map((guitarra, index) => {
                         return(
                             <article className="guitarra" key={index}>
-                                <img className="guitarra-image" src={guitarra.image}  alt={guitarra.alt}/>
+
+                                <TransitionGroup>
+                                <CSSTransition
+                                    key={guitarra.image}
+                                    classNames="flicker"
+                                    /* transitionName="flicker" */
+                                    timeout={{ enter: 300, exit: 300 }}
+                                    >
+                                    <img 
+                                        className="guitarra-image" 
+                                        key={guitarra.image} 
+                                        src={guitarra.image} 
+                                        alt={guitarra.alt} 
+                                    />
+                                </CSSTransition>
+                                </TransitionGroup>
+                                
                                 <div className="contenedor-guitarra">
                                     <h3 className="guitarra-name"> {guitarra.name} </h3>
                                     <ol>
@@ -43,6 +66,13 @@ class Guitarras extends Component {
                         )
                     })
                 }
+
+                <section class="wavebot">
+
+                    <div class="wave circulo c"></div>
+
+                </section>
+                
             </section>
         )
     }

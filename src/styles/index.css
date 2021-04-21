@@ -1,5 +1,8 @@
 @charset "UTF-8";
 /* ------------- *\
+    VARIABLES
+\* ------------- */
+/* ------------- *\
     FUENTES
 \* ------------- */
 @font-face {
@@ -66,19 +69,13 @@
 }
 
 body {
+  background-color: #152029;
   font-family: "Allerta", sans-serif;
   margin: 0;
-  animation: tr 2s;
+  animation-name: tr;
+  animation-duration: 6s;
 }
 
-@keyframes tr {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 table {
   width: 100%;
 }
@@ -134,6 +131,10 @@ li:before {
   content: counter(features) ".";
 }
 
+h2 {
+  color: #e7ecef;
+}
+
 .header {
   position: relative;
   max-width: 800px;
@@ -143,6 +144,7 @@ li:before {
 .titulo {
   font-family: "Montserrat", sans-serif;
   font-size: 5rem;
+  color: #e7ecef;
   margin-bottom: 0;
   margin-top: 70px;
   line-height: 13vh;
@@ -157,19 +159,6 @@ li:before {
   font-size: 24px;
   font-style: italic;
   margin-top: 0;
-}
-
-.guitarras {
-  color: #1F313C;
-  margin: 0 auto;
-  margin-bottom: 100px;
-  max-width: 800px;
-}
-.guitarras > h2 {
-  width: 50%;
-  margin: 2rem 0 5rem 0;
-  font-family: "Montserrat", sans-serif;
-  font-size: 2.8rem;
 }
 
 .portada {
@@ -210,55 +199,6 @@ li:before {
   margin-left: 0;
 }
 
-.guitarra {
-  display: flex;
-  position: relative;
-  align-items: center;
-  padding: 10px 4em;
-  height: 24vh;
-  margin: 20px auto;
-  border: 5px solid #1F313C;
-  border-radius: 6px;
-  color: whitesmoke;
-  background-color: #118ab2;
-  transition: 0.3s;
-  /*overflow: hidden;*/
-}
-.guitarra-image {
-  width: 100%;
-  max-width: 350px;
-  position: absolute;
-  right: 0;
-  top: -88px;
-}
-
-.guitarra:hover {
-  box-shadow: 10px 8px 0 #e56b6f;
-}
-
-.guitarra:nth-of-type(even) {
-  justify-content: flex-end;
-  background-color: #06d6a0;
-  color: #212529;
-}
-
-.guitarra:nth-of-type(even):hover {
-  box-shadow: -10px 8px 0 #212529;
-}
-
-.guitarra:nth-of-type(even) .guitarra-image {
-  max-width: 420px;
-  left: 0;
-  right: initial;
-  top: -20px;
-}
-
-.guitarra-name {
-  font-size: 3em;
-  margin: 0 0 0.2em;
-  border-bottom: 0.1rem dashed;
-}
-
 .footer {
   display: flex;
   justify-content: center;
@@ -267,6 +207,7 @@ li:before {
   margin: auto;
   text-align: center;
   max-width: 1920px;
+  z-index: 300;
 }
 
 .contacto {
@@ -356,6 +297,76 @@ li:before {
   display: flex;
   justify-content: center;
   margin-bottom: 80px;
+}
+
+.guitarras {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1920px;
+  margin: 0;
+  margin-bottom: 100px;
+  color: #1F313C;
+}
+.guitarras > h2 {
+  width: 50%;
+  margin: 2rem 0 5rem 25rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.8rem;
+}
+
+.guitarra {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  max-width: 45%;
+  padding: 10px 4em;
+  height: 25vh;
+  margin: 20px auto;
+  border-radius: 15px;
+  color: whitesmoke;
+  background-color: #118ab2;
+  transition: 0.3s;
+  z-index: 300;
+  /* overflow: hidden; */
+}
+.guitarra-image {
+  width: 100%;
+  max-width: 350px;
+  position: absolute;
+  right: 30px;
+  left: initial;
+  /* top: -82px;   */
+  bottom: 0px;
+}
+
+.guitarra-name {
+  font-size: 3em;
+  margin: 0 0 0.2em;
+  border-bottom: 0.1rem dashed;
+}
+
+.guitarra:hover {
+  box-shadow: 10px 10px 0 #fe6d73;
+}
+
+.guitarra:nth-of-type(even) {
+  justify-content: flex-end;
+  background-color: #06d6a0;
+  color: #212529;
+}
+
+.guitarra:nth-of-type(even):hover {
+  box-shadow: -10px 10px 0 #ffcb77;
+}
+
+.guitarra:nth-of-type(even) .guitarra-image {
+  max-width: 400px;
+  left: 0;
+  right: initial;
+  /* top: -20px; */
+  bottom: 0px;
 }
 
 @media screen and (max-width: 800px) {
@@ -614,6 +625,175 @@ video {
 @media screen and (-webkit-min-device-pixel-ratio: 2) {
   .background {
     background-image: url("../items/images/background2x.png");
+  }
+}
+.flicker-enter {
+  animation-name: flicker;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+}
+
+.flicker-exit {
+  animation-name: flicker;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+}
+
+@keyframes flicker {
+  from {
+    opacity: 0.5;
+    transform: rotateY(0deg);
+  }
+  4% {
+    opacity: 0.5;
+  }
+  6% {
+    opacity: 0.45;
+  }
+  8% {
+    opacity: 0.55;
+  }
+  10% {
+    opacity: 0.45;
+  }
+  11% {
+    opacity: 0.5;
+  }
+  12% {
+    opacity: 0.65;
+  }
+  14% {
+    opacity: 0.55;
+  }
+  16% {
+    opacity: 0.7;
+  }
+  17% {
+    opacity: 0.55;
+  }
+  19% {
+    opacity: 0.5;
+  }
+  20% {
+    opacity: 0.5;
+  }
+  24% {
+    opacity: 0.5;
+  }
+  26% {
+    opacity: 0.69;
+  }
+  28% {
+    opacity: 0.5;
+  }
+  38% {
+    opacity: 0.45;
+  }
+  40% {
+    opacity: 0.5;
+  }
+  42% {
+    opacity: 0.6;
+  }
+  44% {
+    opacity: 0.5;
+  }
+  46% {
+    opacity: 0.5;
+  }
+  56% {
+    opacity: 0.5;
+  }
+  58% {
+    opacity: 0.75;
+  }
+  60% {
+    opacity: 0.5;
+  }
+  68% {
+    opacity: 0.5;
+  }
+  70% {
+    opacity: 0.6;
+  }
+  72% {
+    opacity: 0.5;
+  }
+  93% {
+    opacity: 0.5;
+  }
+  95% {
+    opacity: 0.6;
+  }
+  97% {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 0.5;
+    transform: rotateY(360deg);
+  }
+}
+@keyframes tr {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.wavetop {
+  position: absolute;
+  width: 100%;
+  bottom: -527px;
+  height: 527px;
+  overflow: hidden;
+  transform: rotate(180deg);
+}
+
+.wavebot {
+  position: absolute;
+  width: 100%;
+  bottom: -1365px;
+  height: 527px;
+  overflow: hidden;
+}
+
+.wave {
+  position: absolute;
+  width: 2402px;
+  height: 427px;
+  left: -180px;
+  bottom: -70px;
+  background: url(../items/images/waves.png) center bottom no-repeat;
+  animation: 8s waves;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+
+.a {
+  background-position: 0 -854px;
+}
+
+.b {
+  background-position: 0 -427px;
+  animation-delay: 0.6s;
+}
+
+.c {
+  background-position: 0 0;
+  animation-delay: 1.2s;
+}
+
+@keyframes waves {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-80px, 30px);
+  }
+  100% {
+    transform: translate(160px, -60px);
   }
 }
 

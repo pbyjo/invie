@@ -18,6 +18,9 @@ import logoWhite from './items/images/invie-white.png';
 import g_acustica from './items/images/invie-acustica.png';
 import g_electrica from './items/images/invie-classic.png';
 
+import easter_guitarA from './items/images/easter-a.png';
+import easter_guitarB from './items/images/easter-b.png';
+
 /* libs */
 import cheet from 'cheet.js';
 import {Provider} from 'react-redux';
@@ -81,6 +84,28 @@ const easter = {
       title: 'Home',
     }
   ],
+  guitarras: [
+    {
+      image: easter_guitarA,
+      alt: 'Guitarra Invie Acustiadventure',
+      name: 'Invie Padre de familia',
+      features: [
+        'Estilo Caricatura',
+        'Madera imaginaria',
+        'Incluye estuche invisible de papel',
+      ]
+    },
+    {
+      image: easter_guitarB,
+      alt: 'Guitarra Invie eléctric frame',
+      name: 'Invie Anime inv',
+      features: [
+        'Estilo Japones',
+        'Madera bambú',
+        'Incluye estuche magico y picks de diamantes',
+      ]
+    },
+  ]
 }
 
 function reducer(state, action) {
