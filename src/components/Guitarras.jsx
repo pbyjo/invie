@@ -39,7 +39,7 @@ class Guitarras extends Component {
                                     key={guitarra.image}
                                     classNames="flicker"
                                     /* transitionName="flicker" */
-                                    timeout={{ enter: 300, exit: 300 }}
+                                    timeout={{ enter: 500, exit: 500 }}
                                     >
                                     <img 
                                         className="guitarra-image" 
@@ -49,19 +49,28 @@ class Guitarras extends Component {
                                     />
                                 </CSSTransition>
                                 </TransitionGroup>
-                                
-                                <div className="contenedor-guitarra">
-                                    <h3 className="guitarra-name"> {guitarra.name} </h3>
-                                    <ol>
-                                        {
-                                            guitarra.features.map((feature, index) => {
-                                                return(
-                                                    <li key={index}> {feature} </li>
-                                                )
-                                            })
-                                        }
-                                    </ol>
-                                </div>
+
+                                <TransitionGroup>
+                                <CSSTransition
+                                    key={guitarra.name}
+                                    classNames="fade"
+                                    timeout={{ enter: 500, exit: false }}
+                                >
+                                    <div className="contenedor-guitarra" key={guitarra.name}>
+                                        <h3 className="guitarra-name"> {guitarra.name} </h3>
+                                        <ol>
+                                            {
+                                                guitarra.features.map((feature, index) => {
+                                                    return(
+                                                        <li key={index}> {feature} </li>
+                                                    )
+                                                })
+                                            }
+                                        </ol>
+                                    </div>
+                                </CSSTransition>
+                                </TransitionGroup>
+
                             </article>
                         )
                     })

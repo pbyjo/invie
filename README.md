@@ -168,5 +168,13 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group'
 
  >Clase 39
 
-Agregamos  una nueva etiqueta transition group para nuestro contenedor de texto.
-Para realizar una superposicion de los elementos que entran y salen agregamos un valor booleano para nuestro `exit: false`
+Agregamos  otra animacion para la info llamado `fade`
+
+Para realizar una superposicion de los elementos que entran y salen agregamos un valor booleano para nuestro `exit: false` ya que necesitamos una salida inmediata y darle una transicion solo al elemento entrante.
+
+usamos active y exit en css con transition. En este caso no es necesario un keyframes.
+
+#### Animación de entrada y salida en la portada
+
+ >Clase 40
+
