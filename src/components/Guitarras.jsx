@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { CSSTransition, TransitionGroup } from 'react-transition-group'
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 function mapStateToProps(state) {
     return {
@@ -15,8 +15,8 @@ class Guitarras extends Component {
         return (
             <section id="guitarras" className="guitarras">
 
-                <section class="wavetop">
-                    <div class="wave circulo a"></div>
+                <section className="wavetop">
+                    <div className="wave circulo a"></div>
                 </section>
 
                 <h2>Nuestras guitarras</h2>
@@ -39,7 +39,7 @@ class Guitarras extends Component {
                                     key={guitarra.image}
                                     classNames="flicker"
                                     /* transitionName="flicker" */
-                                    timeout={{ enter: 500, exit: 500 }}
+                                    timeout={{enter: 500, exit: 500}}
                                     >
                                     <img 
                                         className="guitarra-image" 
@@ -54,7 +54,7 @@ class Guitarras extends Component {
                                 <CSSTransition
                                     key={guitarra.name}
                                     classNames="fade"
-                                    timeout={{ enter: 500, exit: false }}
+                                    timeout={{enter: 500, exit: 0}}
                                 >
                                     <div className="contenedor-guitarra" key={guitarra.name}>
                                         <h3 className="guitarra-name"> {guitarra.name} </h3>
@@ -76,9 +76,9 @@ class Guitarras extends Component {
                     })
                 }
 
-                <section class="wavebot">
+                <section className="wavebot">
 
-                    <div class="wave circulo c"></div>
+                    <div className="wave circulo c"></div>
 
                 </section>
                 

@@ -1,10 +1,12 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 function mapStateToProps(state) {
     return {
         logoP: state.logoHeader,
-        menu: state.menu
+        menu: state.menu,
+        isAnimated: state.isAnimated,
     }
 }
 
@@ -34,11 +36,23 @@ class Hero extends Component {
                     </nav>
                 </header>
 
-                <div className="contenedor">     
-                    <h1 className="titulo">Guitarras <span>Invie</span> sibles</h1>
-                    <h3 className="slogan-title">Sé la estrella de rock que siempre quisiste ser</h3>
-                    <a className="button" href="#guitarras">Conoce mas</a>
-                </div>
+                {/* <TransitionGroup> */}
+                <CSSTransition
+                    classNames="animationInOut"
+                    timeout={{enter: 800, exit: 800}}
+                >  
+
+                    {
+                        !this.props.isAnimated &&
+                            <article className="contenedor" key="portada">     
+                                <h1 className="titulo">Guitarras <span>Invie</span> sibles</h1>
+                                <h3 className="slogan-title">Sé la estrella de rock que siempre quisiste ser</h3>
+                                <a className="button" href="#guitarras">Conoce mas</a>
+                            </article>
+                    }
+
+                </CSSTransition>
+                {/* </TransitionGroup> */}
 
             </section>
         )

@@ -744,14 +744,6 @@ video {
     transform: rotateY(360deg);
   }
 }
-@keyframes tr {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 .fade-enter {
   opacity: 0;
   transform: scale(0.2);
@@ -774,6 +766,54 @@ video {
   transition: 0.5s;
 }
 
+@keyframes tr {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.animationInOut-enter {
+  animation-name: animationIn;
+  animation-duration: 0.8s;
+  /* animation-fill-mode: forwards; */
+}
+
+.animationInOut-exit {
+  animation-name: animationOut;
+  animation-duration: 0.8s;
+  /* animation-fill-mode: forwards;  */
+}
+
+@keyframes animationIn {
+  0% {
+    transform: translateY(-3000px);
+  }
+  60% {
+    transform: translateY(25px);
+  }
+  75% {
+    transform: translateY(-10px);
+  }
+  90% {
+    transform: translateY(5px);
+  }
+}
+@keyframes animationOut {
+  0% {
+    transform: translateY(5px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+  75% {
+    transform: translateY(25px);
+  }
+  90% {
+    transform: translateY(-3000px);
+  }
+}
 .wavetop {
   position: absolute;
   width: 100%;

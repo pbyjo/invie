@@ -34,7 +34,6 @@ let videoP = "https://www.youtube.com/embed/R1dW8M4EqYY";
 \* ------------------------- */
 
 const initialState = {
-  
   guitarras: [
     {
       image: g_acustica,
@@ -71,10 +70,10 @@ const initialState = {
       title: 'Precios',
     }
   ],
-  
   logoHeader: logoHeader,
   logoFooter: logoWhite,
   videoP: videoP,
+  isAnimated: false,
 }
 
 const easter = {
@@ -105,7 +104,8 @@ const easter = {
         'Incluye estuche magico y picks de diamantes',
       ]
     },
-  ]
+  ],
+  isAnimated: 'isAnimated',
 }
 
 function reducer(state, action) {
