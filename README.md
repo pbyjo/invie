@@ -179,3 +179,20 @@ usamos active y exit en css con transition. En este caso no es necesario un keyf
  >Clase 40
 
 Animación para el texto del Hero `animationInOut` (aún por debuggear).
+
+como alternativa use display none como atributo de la etiqueta `this.props.display`
+
+#### Animando el background de la portada
+
+ >Clase 41
+
+``` jsx
+function mapStateToProps(state) {
+    return {
+        display: state.display,
+    }
+}
+
+  ${this.props.isAnimated}
+```
+

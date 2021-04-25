@@ -5,10 +5,23 @@
     position: relative;
 }
 
+.display-none {
+    display: none;
+}
+
 .background {
     background-color: #466173;
     background-image: url('../items/images/background.png');
     background-size: cover;
+}
+
+.portada.background.is-animated {
+    background-color: #466173;
+    background-image: url('../items/images/gibson.jpg');
+    background-size: cover; 
+    background-repeat: no-repeat;
+
+    animation: background 15s linear infinite alternate;
 }
 
 .button {

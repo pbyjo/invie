@@ -33,6 +33,8 @@ let videoP = "https://www.youtube.com/embed/R1dW8M4EqYY";
 \* ------------------------- */
 
 const initialState = {
+  issAnimated: false,
+  display: 'contenedor',
   guitarras: [
     {
       image: g_acustica,
@@ -72,15 +74,28 @@ const initialState = {
   logoHeader: logoHeader,
   logoFooter: logoWhite,
   videoP: videoP,
-  /* isAnimated: false, */
 }
 
 const easter = {
+  issAnimated: "is-animated",
+  display: "display-none",
   menu: [
     {
       href: 'index.html',
       title: 'Home',
-    }
+    },
+    {
+      href: '#guitarras',
+      title: 'Electric',
+    },
+    {
+      href: '#guitarras',
+      title: 'Acoustic',
+    },
+    {
+      href: '#video',
+      title: 'Accesories',
+    },
   ],
   guitarras: [
     {
@@ -104,7 +119,6 @@ const easter = {
       ]
     },
   ],
-  /* isAnimated: 'isAnimated', */
 }
 
 function reducer(state, action) {
