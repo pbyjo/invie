@@ -5,7 +5,7 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 function mapStateToProps(state) {
     return {
         guitarras: state.guitarras,
-        video: state.videoP,
+        videoU: state.videoP,
         waves: state.waves,
     }
 }
@@ -24,7 +24,7 @@ class Guitarras extends Component {
                 <div className="video-demo-contenedor">
                     <div className="video-demo">
                         <div className="video-responsive-contenedor">
-                                <iframe className="video-responsive-src" src={this.props.video} frameBorder="0" allowFullScreen></iframe>
+                                <iframe className="video-responsive-src" src={this.props.videoU} frameBorder="0" allowFullScreen></iframe>
                         </div>
                     </div>
                 </div>

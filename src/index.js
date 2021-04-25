@@ -4,7 +4,6 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import reportWebVitals from './reportWebVitals';
 
 /* Componentes */
 import Invie from './components/Invie';
@@ -73,7 +72,7 @@ const initialState = {
   logoHeader: logoHeader,
   logoFooter: logoWhite,
   videoP: videoP,
-  isAnimated: false,
+  /* isAnimated: false, */
 }
 
 const easter = {
@@ -105,7 +104,7 @@ const easter = {
       ]
     },
   ],
-  isAnimated: 'isAnimated',
+  /* isAnimated: 'isAnimated', */
 }
 
 function reducer(state, action) {
@@ -135,7 +134,7 @@ cheet('i n v i e', () =>{
   /* console.log('Has descubierto el easter egg'); */
 })
 
-cheet('g o b a c k' , () =>{
+cheet('g o b a c k', () =>{
   /* console.log('Has vuelto al estado original'); */
   store.dispatch( {
     type: 'UPDATE_PROPS',
@@ -151,8 +150,3 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

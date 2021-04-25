@@ -178,3 +178,4 @@ usamos active y exit en css con transition. En este caso no es necesario un keyf
 
  >Clase 40
 
+Animación para el texto del Hero `animationInOut` (aún por debuggear).
