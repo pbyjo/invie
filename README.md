@@ -1,4 +1,10 @@
-# React Animations
+# React Animations 🎨
+
+## Typea i n v i e   y verás la magia ✨ para volver vuelve a typear g o b a c k 😃
+
+Este es un proyecto hecho con React, redux sass y cheet js. Documentando y aplicando lo aprendido en el ultimo módulo del curso de animaciones para la web enfocado en react. Con el manejamos estados y volvemos los datos dinámicos con el objetivo de crear un easter egg typeando la palabra `i n v i e` para volver al estado inicial solo debemos escribir `g o b a c k` esto con la ayuda de cheet js instalado con npm. =)
+
+---------------------------- . ---------------------------- 
 
 #### Configurando una aplicación en React JS
 
@@ -195,4 +201,60 @@ function mapStateToProps(state) {
 
   ${this.props.isAnimated}
 ```
+
+``` scss
+@keyframes background {
+    0% {
+        background-position: center;
+        background-size: 120%;
+    }
+    20% {
+        background-position: right top;
+    }
+    40% {
+        background-position: center;
+        background-size: 100%;
+    }
+    60% {
+        background-position: left top;
+    }
+    80% {
+        background-position: left -100px;
+    }
+    100% {
+        background-position: left -100px;
+        background-size: 150%;
+    }
+}
+```
+
+#### Multiplicando y animando los corazones
+
+ >Clase 42
+
+Para ello creamos un método en `Hero.jsx` que nos permite retornar la cantidad de elementos agregados(corazones) con un Array. Usamos la funcion math para generar distancia aleatoria dentro del objeto window con .innerwidth -100px para limitar el ancho y que no salga de pantalla generando un scroll horizontal y un delay aleatorio para alternar las distancias verticalmente y haya asi un efecto uniforme.
+
+``` jsx 
+  renderHeart() {
+        const hearts = new Array(80).fill({})
+        return (
+            hearts.map((element, index) => {
+                const styleRandom = {
+                    left: Math.floor((Math.random() * (window.innerWidth - 100))) + 0 + "px",
+                    animationDelay: Math.floor((Math.random() * (10000 - 0))) + 0 + "ms"
+                }
+                return(
+                    <Heart key={index} style={styleRandom}/>
+                )
+            })
+        )  
+  }
+
+  {
+    this.props.isAnimated &&
+    this.renderHeart()
+  } //If con método antes declarado
+```
+
+cómo extra se le agrego la animación fade anteriormente configurada al logo del header agregando un .map a las propiedades del logo con ello podemos asignarle un key para iterar los elementos y que aplique la animación dandole transición y suavizar el cambio del easter. Se cambiaron diseños y se agregaron olas en la seccion guitarras.
 

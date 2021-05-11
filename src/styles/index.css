@@ -148,8 +148,11 @@ h2 {
 }
 
 .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   position: relative;
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -195,20 +198,31 @@ h2 {
 }
 
 .menu a {
+  font-size: 1.4rem;
+  font-weight: 400;
   color: white;
   text-decoration: none;
 }
 
 .menu li:before {
   content: "∘";
-  font-size: 50px;
-  line-height: 20px;
+  font-size: 25px;
+  line-height: 0;
   color: white;
 }
 
 .logotipo {
+  width: 100%;
+  max-width: 120px;
   display: inline-block;
   margin-left: 0;
+}
+.logotipo > img {
+  width: inherit;
+  max-width: inherit;
+  font-size: 1rem;
+  color: whitesmoke;
+  border-radius: 8px;
 }
 
 .footer {
@@ -224,12 +238,17 @@ h2 {
 
 .contacto {
   display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   width: 300px;
   flex-wrap: wrap;
   align-items: center;
 }
 
 .contacto img {
+  width: 100%;
+  border-radius: 8px;
+  max-width: 140px;
   display: block;
 }
 
@@ -240,7 +259,7 @@ h2 {
 .contacto a {
   color: white;
   text-decoration: none;
-  margin: 0 15px 0 0;
+  margin: 0;
 }
 
 .formulario {
@@ -847,6 +866,46 @@ video {
   100% {
     background-position: left -100px;
     background-size: 150%;
+  }
+}
+.like {
+  box-sizing: border-box;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  background-image: url(../items/images/corazon.png);
+  background-size: 1450px 50px;
+  z-index: 150;
+}
+
+.like.is-liked {
+  animation-name: like, move;
+  animation-duration: 0.6s, 10s;
+  animation-timing-function: steps(28), linear;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite, 1;
+  position: fixed;
+  bottom: -100px;
+  will-change: left;
+}
+
+@keyframes like {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: right;
+    /* background-position: -2800px 0; */
+  }
+}
+@keyframes move {
+  from {
+    position: absolute;
+    bottom: 0;
+  }
+  to {
+    position: absolute;
+    bottom: 120vh;
   }
 }
 .wavetop {

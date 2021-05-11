@@ -1,6 +1,9 @@
 .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: relative;
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
@@ -47,20 +50,32 @@
 }
 
 .menu a {
+    font-size: 1.4rem;
+    font-weight: 400;
     color: white;
     text-decoration: none;
 }
 
 .menu li:before {
     content: '∘';
-    font-size: 50px;
-    line-height: 20px;
+    font-size: 25px;
+    line-height: 0;
     color: white;
 }
 
 .logotipo {
+    width: 100%;
+    max-width: 120px;
     display: inline-block;
     margin-left: 0;
+
+    & > img {
+        width: inherit;
+        max-width: inherit;
+        font-size: 1rem;
+        color: whitesmoke;
+        border-radius: 8px;
+    }
 }
 
 .footer {
@@ -76,12 +91,17 @@
 
 .contacto {
     display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     width: 300px;
     flex-wrap: wrap;
     align-items: center;
 }
 
 .contacto img {
+    width: 100%;
+    border-radius: 8px;
+    max-width: 140px;
     display: block;
 }
 
@@ -92,7 +112,7 @@
 .contacto a {
     color: white;
     text-decoration: none;
-    margin: 0 15px 0 0;
+    margin: 0;
 }
 
 .formulario {

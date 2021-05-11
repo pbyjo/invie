@@ -14,6 +14,8 @@ import './styles/index.css';
 /* Logos e imágenes */
 import logoHeader from './items/images/invie.png';
 import logoWhite from './items/images/invie-white.png';
+import logoGibson from './items/images/gibson-logo.png';
+import logoGibsonF from './items/images/gibson-logoF.png';
 import g_acustica from './items/images/invie-acustica.png';
 import g_electrica from './items/images/invie-classic.png';
 
@@ -35,6 +37,19 @@ let videoP = "https://www.youtube.com/embed/R1dW8M4EqYY";
 const initialState = {
   issAnimated: false,
   display: 'contenedor',
+
+  logos: [
+    {
+      image: logoHeader,
+      alt: 'Logo Invie',
+    }
+  ],
+  logosF: [
+    {
+      image: logoWhite,
+      alt: 'Logo Invie',
+    }
+  ],
   guitarras: [
     {
       image: g_acustica,
@@ -71,14 +86,26 @@ const initialState = {
       title: 'Precios',
     }
   ],
-  logoHeader: logoHeader,
-  logoFooter: logoWhite,
+  /* logoFooter: logoWhite, */
   videoP: videoP,
 }
 
 const easter = {
   issAnimated: "is-animated",
   display: "display-none",
+
+  logos: [
+    {
+      image: logoGibson,
+      alt: 'Logo Gibson',
+    }
+  ],
+  logosF: [
+    {
+      image: logoGibsonF,
+      alt: 'Logo Gibson',
+    }
+  ],
   menu: [
     {
       href: 'index.html',
@@ -100,8 +127,8 @@ const easter = {
   guitarras: [
     {
       image: easter_guitarA,
-      alt: 'Guitarra Invie Acustiadventure',
-      name: 'Invie Padre de familia',
+      alt: 'Guitarra Gibson Acustiadventure',
+      name: 'Gibson Padre de familia',
       features: [
         'Estilo Caricatura',
         'Madera imaginaria',
@@ -110,8 +137,8 @@ const easter = {
     },
     {
       image: easter_guitarB,
-      alt: 'Guitarra Invie eléctric frame',
-      name: 'Invie Anime inv',
+      alt: 'Guitarra Gibson eléctric frame',
+      name: 'Les Paul Invisible',
       features: [
         'Estilo Japones',
         'Madera bambú',

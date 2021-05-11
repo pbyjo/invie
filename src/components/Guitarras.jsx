@@ -40,7 +40,7 @@ class Guitarras extends Component {
                                     classNames="flicker"
                                     /* transitionName="flicker" */
                                     timeout={{enter: 500, exit: 500}}
-                                    >
+                                >
                                     <img 
                                         className="guitarra-image" 
                                         key={guitarra.image} 
