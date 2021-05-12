@@ -1,11 +1,11 @@
 @charset "UTF-8";
 @font-face {
     font-family: "icomoon";
-    src: url(./static/media/icomoon.53f8ee77.eot);
-    src: url(./static/media/icomoon.53f8ee77.eot#iefix) format("embedded-opentype"),
-        url(./static/media/icomoon.241920be.ttf) format("truetype"),
-        url(./static/media/icomoon.a475e31c.woff) format("woff"),
-        url(./static/media/icomoon.4ef157e4.svg#icomoon) format("svg");
+    src: url(../media/icomoon.53f8ee77.eot);
+    src: url(../media/icomoon.53f8ee77.eot#iefix) format("embedded-opentype"),
+        url(../media/icomoon.241920be.ttf) format("truetype"),
+        url(../media/icomoon.a475e31c.woff) format("woff"),
+        url(../media/icomoon.4ef157e4.svg#icomoon) format("svg");
     font-weight: 400;
     font-style: normal;
 }
@@ -42,7 +42,7 @@
     display: none;
 }
 .background {
-    background-image: url(./static/media/background.ff32ff69.png);
+    background-image: url(../media/background.ff32ff69.png);
 }
 .background,
 .portada.background.is-animated {
@@ -50,7 +50,7 @@
     background-size: cover;
 }
 .portada.background.is-animated {
-    background-image: url(./static/media/gibson.a0a2ae21.jpg);
+    background-image: url(../media/gibson.a0a2ae21.jpg);
     background-repeat: no-repeat;
     -webkit-animation: background 15s linear infinite alternate;
     animation: background 15s linear infinite alternate;
@@ -558,7 +558,7 @@ video {
 }
 @media screen and (-webkit-min-device-pixel-ratio: 2) {
     .background {
-        background-image: url(./static/media/background2x.df0f61a6.png);
+        background-image: url(../media/background2x.df0f61a6.png);
     }
 }
 .flicker-enter,
@@ -974,7 +974,7 @@ video {
     cursor: pointer;
     width: 50px;
     height: 50px;
-    background-image: url(./static/media/corazon.fa922e04.png);
+    background-image: url(../media/corazon.fa922e04.png);
     background-size: 1450px 50px;
     z-index: 150;
 }
@@ -1050,7 +1050,7 @@ video {
     height: 427px;
     left: -180px;
     bottom: -70px;
-    background: url(./static/media/waves.bb7eaedd.png) bottom no-repeat;
+    background: url(../media/waves.bb7eaedd.png) bottom no-repeat;
     -webkit-animation: waves 8s;
     animation: waves 8s;
     -webkit-animation-iteration-count: infinite;
