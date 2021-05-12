@@ -24,7 +24,7 @@ class Guitarras extends Component {
                 <div className="video-demo-contenedor">
                     <div className="video-demo">
                         <div className="video-responsive-contenedor">
-                                <iframe className="video-responsive-src" src={this.props.videoU} frameBorder="0" allowFullScreen></iframe>
+                                <video className="video-responsive-src" src={this.props.videoU} frameBorder="0" allowFullScreen></video>
                         </div>
                     </div>
                 </div>
